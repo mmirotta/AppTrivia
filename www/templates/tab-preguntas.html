@@ -1,0 +1,27 @@
+<ion-view view-title="Preguntas">
+  <ion-content>
+  	<div class="list list-inset">
+	  <label class="item item-input">
+	    <input type="text" placeholder="Pregunta" name="pregunta" ng-model="pregunta.nombre">
+	  </label>
+	  <label class="item item-input">
+	    <input type="text" placeholder="Opción 1" name="opcion1" ng-model="pregunta.opcion1">
+	  </label>
+	  <label class="item item-input">
+	    <input type="text" placeholder="Opción 2" name="opcion2" ng-model="pregunta.opcion2">
+	  </label>
+	  <label class="item item-input">
+	    <input type="text" placeholder="Opción 3" name="opcion3" ng-model="pregunta.opcion3">
+	  </label>
+	  <label class="item item-input">
+	    <input type="number" placeholder="Puntaje" name="puntaje" ng-model="pregunta.puntaje">
+	  </label>
+	  <label class="item item-input">
+	    <input type="number" placeholder="numero" name="numero" ng-model="pregunta.numero">
+	  </label>
+	  <button class="button button-block button-positive" ng-click="Agregar()" >
+		  Agregar
+	  </button>
+	</div>
+  </ion-content>
+</ion-view>

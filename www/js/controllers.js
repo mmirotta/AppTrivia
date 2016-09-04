@@ -1,28 +1,34 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('JuegoCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('PreguntasCtrl', function($scope) {
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+  var mensajeReferencia = new Firebase('https://trivia-bea4e.firebaseio.com/preguntas/');
+    $scope.pregunta = {};
+    $scope.pregunta.nombre = "";
+    $scope.pregunta.opcion1 = "";
+    $scope.pregunta.opcion2 = "";
+    $scope.pregunta.opcion3 = "";
+    $scope.pregunta.puntaje = "";
+    $scope.pregunta.numero = "";
+
+  $scope.Agregar = function(){
+
+    mensajeReferencia.push({pregunta:$scope.pregunta.nombre, opcion1:$scope.pregunta.opcion1, opcion2:$scope.pregunta.opcion2, opcion3:$scope.pregunta.opcion3, puntaje:$scope.pregunta.puntaje, numero:$scope.pregunta.numero});
+    $scope.pregunta.nombre = "";
+    $scope.pregunta.opcion1 = "";
+    $scope.pregunta.opcion2 = "";
+    $scope.pregunta.opcion3 = "";
+    $scope.pregunta.puntaje = "";
+    $scope.pregunta.numero = "";
   };
+
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+/*.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
-})
+})*/
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+.controller('PerfilCtrl', function($scope) {
 });
