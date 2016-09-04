@@ -1,5 +1,5 @@
 <ion-view view-title="Preguntas">
-  <ion-content>
+  <ion-content class="padding">
   	<div class="list list-inset">
 	  <label class="item item-input">
 	    <input type="text" placeholder="Pregunta" name="pregunta" ng-model="pregunta.nombre">
@@ -12,6 +12,12 @@
 	  </label>
 	  <label class="item item-input">
 	    <input type="text" placeholder="Opción 3" name="opcion3" ng-model="pregunta.opcion3">
+	  </label>
+  	  <label class="item item-input">
+	    <input type="text" placeholder="Opción 4" name="opcion4" ng-model="pregunta.opcion4">
+	  </label>
+	  <label class="item item-input">
+	    <input type="number" placeholder="Opción correcta" name="correcta" ng-model="pregunta.correcta">
 	  </label>
 	  <label class="item item-input">
 	    <input type="number" placeholder="Puntaje" name="puntaje" ng-model="pregunta.puntaje">
