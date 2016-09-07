@@ -1,12 +1,21 @@
 <ion-view view-title="Jugar">
   <ion-content class="padding">
-    <div class="list list-inset">
-      <label class="item item-input">
-        <input type="text" placeholder="Pregunta" name="pregunta" ng-model="pregunta.nombre">
-      </label>
-      <button class="button button-block button-positive" ng-click="Agregar()" >
-        Agregar
-      </button>
+    <div class="item item-text-wrap">
+      <span>{{pregunta.pregunta}}</span>
     </div>
+    <div class="item item-calm">
+      <button class="button button-block button-stable" ng-click="Comprobar('1')" >
+        {{pregunta.opcion1}}
+      </button>
+      <button class="button button-block button-stable" ng-click="Comprobar('2')" >
+        {{pregunta.opcion2}}
+      </button>
+      <button class="button button-block button-stable" ng-click="Comprobar('3')" >
+        {{pregunta.opcion3}}
+      </button>
+      <button class="button button-block button-stable" ng-click="Comprobar('4')" >
+        {{pregunta.opcion4}}
+      </button>
+  </div>
   </ion-content>
 </ion-view>
