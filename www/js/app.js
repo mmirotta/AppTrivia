@@ -60,6 +60,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.resultado', {
+    url: '/resultado/:resultado',
+    views: {
+      'tab-ingreso': {
+        templateUrl: 'templates/tab-resultado.html',
+        controller: 'ResultadoCtrl'
+      }
+    }
+  })
+
   .state('tab.preguntas', {
       url: '/preguntas',
       views: {
@@ -68,16 +78,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'PreguntasCtrl'
         }
       }
-    })
-    /*.state('tab.chat-detail', {
-      url: '/chats/:chatId',
+  })
+
+  .state('tab.puntuaciones', {
+      url: '/puntuaciones',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-puntuaciones': {
+          templateUrl: 'templates/tab-puntuaciones.html',
+          controller: 'PuntuacionesCtrl'
         }
       }
-    })*/
+  })
 
   .state('tab.perfil', {
     url: '/perfil',
